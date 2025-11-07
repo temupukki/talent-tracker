@@ -5,6 +5,7 @@ const page = () => {
     <div>pukki ana tew
       <h1>abebe</h1>
       <h2>ndckndsck</h2>
+      <h1>2</h1>
      
        </div>
     
