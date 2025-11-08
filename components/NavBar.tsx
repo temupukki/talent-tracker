@@ -3,6 +3,14 @@ import { motion } from "framer-motion";
 import { div, li, ul } from "framer-motion/client";
 import { ChevronDown, MoveDown } from "lucide-react";
 import { useState } from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
 
 const navbar_items: string[] = ["Home", "About", "Contact", "Login"];
 export default function NavBar() {
@@ -39,19 +47,15 @@ export default function NavBar() {
           >
             Sign Up
           </motion.button>
-          <motion.button onClick={() => setOpen(!open)} className="flex">
-            EN
-            <ChevronDown />
-          </motion.button>
-          {open && (
-            <ul>
-                <li>English</li>
-               <li>Amharic</li>
-               </ul>
-          )}
-            
-
-               
+          <div className="-mt-0.3">
+          <DropdownMenu>
+            <DropdownMenuTrigger><span>EN</span> <ChevronDown /></DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem>English</DropdownMenuItem>
+              <DropdownMenuItem>Amharic</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          </div>
         </div>
       </nav>
     </div>
