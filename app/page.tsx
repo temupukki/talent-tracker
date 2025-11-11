@@ -9,7 +9,7 @@ export default function Home(){
          <pre className="px-29 text-6xl text-blue-950 font-black pt-3">and full life.</pre> 
       </div>
       <div>
-        kjbvhkbvsjk
+        Pass
       </div>
 
     </div>
