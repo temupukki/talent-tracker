@@ -1,7 +1,4 @@
 'use client'
-
-import { div } from "framer-motion/client"
-
 export default function Home(){
   return(
     <div className="grid grid-cols-2 ">
@@ -16,5 +13,4 @@ export default function Home(){
       </div>
 
     </div>
-  )
-}
+    )}
