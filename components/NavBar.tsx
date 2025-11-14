@@ -17,7 +17,7 @@ export default function NavBar() {
   const [open, setOpen] = useState(false);
   return (
     <div className="px-11">
-      <nav className="flex justify-end gap-23 text-green-700 z-10 px-10 py-6 ">
+      <nav className="flex justify-end gap-12 text-green-700 z-10 px-10 py-6 ">
         <div className="absolute top-6 left-6">
           <motion.h1 whileHover={{ scale: 1.2 }} className="font-bold text-2xl">
             CertiFlow
