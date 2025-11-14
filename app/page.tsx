@@ -1,4 +1,14 @@
 "use client";
+
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card";
+import { CloudSun } from "lucide-react";
+
 export default function Home() {
   return (
     <div>
@@ -28,6 +38,18 @@ export default function Home() {
         <p className="flex flex-col justify-center items-center text-4xl text-blue-950 pt-2 font-bold">
           We Offer Best Services
         </p>
+        <Card className="w-full max-w-sm">
+          <CardHeader>
+            
+            <CardDescription>
+              <CloudSun />
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p>Calculated whether</p>
+
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
