@@ -1,9 +1,11 @@
 "use client ";
 
+import { motion } from "framer-motion";
 import { div } from "framer-motion/client";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Copyright, Facebook, Instagram, Twitter } from "lucide-react";
 
 export default function Footer() {
+  const now:Date= new Date();
   return (
     <div>
       <hr />
@@ -49,11 +51,12 @@ export default function Footer() {
             src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
             alt="Get it on Google Play"
             className="w-40 -ml-3"
+            
           />
         </div>
         
       </footer>
-      <p className="flex flex-row justify-center mt-6 mb-14">All rights reserved </p>
+      <p className="flex flex-row justify-center mt-6 mb-14 gap-2.5"><Copyright />2025 All rights reserved </p>
     </div>
   );
 }

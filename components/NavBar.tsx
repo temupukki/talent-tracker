@@ -43,7 +43,7 @@ export default function NavBar() {
           <motion.button
             whileHover={{ scale: 1.12 }}
             whileTap={{ scale: 0.99 }}
-            className=" border-2 border-gray-700 rounded px-3 py-1.5 -mt-1.5 hover:bg-blue-600 hover:text-white"
+            className=" border-2 border-gray-700 rounded px-3 py-1.5 -mt-1.5 hover:bg-orange-600 hover:text-white"
           >
             Sign Up
           </motion.button>
