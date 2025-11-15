@@ -33,7 +33,7 @@ export default function signUp() {
             Certi<span className="text-orange-600 font-black">F</span>low.
           </h1>
           <p className=" text-gray-700 font-bold text-xl">
-            Welcome back to Certi<span className="text-orange-600 font-black">F</span>low.
+            Welcome back to <span className="font-black text-2xl text-black">Certi<span className="text-orange-600 font-black">F</span>low.</span>
           </p>
         </div>
 
