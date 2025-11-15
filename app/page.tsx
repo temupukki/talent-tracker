@@ -39,68 +39,121 @@ export default function Home() {
           We Offer Best Services
         </p>
         <div className="grid grid-cols-4 gap-18 pt-10">
-       
-       <Card className="w-full max-w-sm">
-          <CardHeader>
-            
-            <CardDescription className="flex flex-col justify-center items-center">
-              <CloudSun className="w-24 h-14"/>
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="font-bold text-gray-800 mb-1">Calculated whether</p>
-             <p className="text-gray-600 font-semibold ">Built Wicket longer </p>
-             <p className="text-gray-600 font-semibold ">admire do barton </p> 
-             <p className="text-gray-600 font-semibold ">vanity itself do in it.</p>
-          </CardContent>
-        </Card>
-            <Card className="w-full max-w-sm">
-          <CardHeader>
-            
-            <CardDescription className="flex flex-col justify-center items-center">
-              <CloudSun className="w-24 h-14"/>
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="font-bold text-gray-800 mb-1">Calculated whether</p>
-             <p className="text-gray-600 font-semibold ">Built Wicket longer </p>
-             <p className="text-gray-600 font-semibold ">admire do barton </p> 
-             <p className="text-gray-600 font-semibold ">vanity itself do in it.</p>
-          </CardContent>
-        </Card>
           <Card className="w-full max-w-sm">
-          <CardHeader>
-            
-            <CardDescription className="flex flex-col justify-center items-center">
-              <CloudSun className="w-24 h-14"/>
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="font-bold text-gray-800 mb-1">Calculated whether</p>
-             <p className="text-gray-600 font-semibold ">Built Wicket longer </p>
-             <p className="text-gray-600 font-semibold ">admire do barton </p> 
-             <p className="text-gray-600 font-semibold ">vanity itself do in it.</p>
-          </CardContent>
-        </Card>
-        <Card className="w-full max-w-sm">
-          <CardHeader>
-            
-            <CardDescription className="flex flex-col justify-center items-center">
-              <CloudSun className="w-24 h-14"/>
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="font-bold text-gray-800 mb-1">Calculated whether</p>
-             <p className="text-gray-600 font-semibold ">Built Wicket longer </p>
-             <p className="text-gray-600 font-semibold ">admire do barton </p> 
-             <p className="text-gray-600 font-semibold ">vanity itself do in it.</p>
-          </CardContent>
-        </Card>
+            <CardHeader>
+              <CardDescription className="flex flex-col justify-center items-center">
+                <CloudSun className="w-24 h-14" />
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="font-bold text-gray-800 mb-1">Calculated whether</p>
+              <p className="text-gray-600 font-semibold ">
+                Built Wicket longer{" "}
+              </p>
+              <p className="text-gray-600 font-semibold ">admire do barton </p>
+              <p className="text-gray-600 font-semibold ">
+                vanity itself do in it.
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="w-full max-w-sm">
+            <CardHeader>
+              <CardDescription className="flex flex-col justify-center items-center">
+                <CloudSun className="w-24 h-14" />
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="font-bold text-gray-800 mb-1">Calculated whether</p>
+              <p className="text-gray-600 font-semibold ">
+                Built Wicket longer{" "}
+              </p>
+              <p className="text-gray-600 font-semibold ">admire do barton </p>
+              <p className="text-gray-600 font-semibold ">
+                vanity itself do in it.
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="w-full max-w-sm">
+            <CardHeader>
+              <CardDescription className="flex flex-col justify-center items-center">
+                <CloudSun className="w-24 h-14" />
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="font-bold text-gray-800 mb-1">Calculated whether</p>
+              <p className="text-gray-600 font-semibold ">
+                Built Wicket longer{" "}
+              </p>
+              <p className="text-gray-600 font-semibold ">admire do barton </p>
+              <p className="text-gray-600 font-semibold ">
+                vanity itself do in it.
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="w-full max-w-sm">
+            <CardHeader>
+              <CardDescription className="flex flex-col justify-center items-center">
+                <CloudSun className="w-24 h-14" />
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="font-bold text-gray-800 mb-1">Calculated whether</p>
+              <p className="text-gray-600 font-semibold ">
+                Built Wicket longer{" "}
+              </p>
+              <p className="text-gray-600 font-semibold ">admire do barton </p>
+              <p className="text-gray-600 font-semibold ">
+                vanity itself do in it.
+              </p>
+            </CardContent>
+          </Card>
         </div>
-
       </div>
-      <div className=" ">
-
+      <div className=" pt-20">
+        <p className=" flex flex-col justify-center items-center  text-sm text-gray-600">
+          Top Selling
+        </p>
+        <p className="flex flex-col justify-center items-center text-4xl text-blue-950 mb-12 mt-2 font-bold">
+          Top Destinations
+        </p>
+        <div className="grid grid-cols-3 gap-21">
+          <Card className="w-full max-w-sm overflow-hidden rounded-2xl shadow-md p-0">
+            <img
+              src="addis.jfif"
+              alt="Addis Ababa"
+              className="w-full h-48 object-cover m-0 p-0 block"
+            />
+            <CardContent className="p-4 space-y-1">
+              <p className="font-semibold text-gray-600">
+                Addis Ababa, Ethiopia
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="w-full max-w-sm overflow-hidden rounded-2xl shadow-md p-0">
+            <img
+              src="addis.jfif"
+              alt="Addis Ababa"
+              className="w-full h-48 object-cover m-0 p-0 block"
+            />
+            <CardContent className="p-4 space-y-1">
+              <p className="font-semibold text-gray-600">
+                Addis ababa, Ethiopia
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="w-full max-w-sm overflow-hidden rounded-2xl shadow-md p-0">
+            <img
+              src="addis.jfif"
+              alt="Addis Ababa"
+              className="w-full h-48 object-cover m-0 p-0 block"
+            />
+            <CardContent className="p-4 space-y-1">
+              <p className="font-semibold text-gray-600">
+                Addis ababa, Ethiopia
+              </p>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </div>
   );
