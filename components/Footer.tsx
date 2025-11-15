@@ -9,7 +9,7 @@ export default function Footer() {
       <hr />
       <footer className="flex flex-row my-10 mx-60  ">
         <div>
-          <h1 className="text-gray-800 text-4xl font-bold mb-6 ">CertiFlow.</h1>
+          <h1 className="text-gray-800 text-4xl font-bold mb-6  ">CertiFlow.</h1>
           <p className="text-gray-600">Lorem ipsum dolor sit elit pukki, </p>
           <p className="text-gray-600">consectetur adipiscing .</p>
         </div>
@@ -51,7 +51,9 @@ export default function Footer() {
             className="w-40 -ml-3"
           />
         </div>
+        
       </footer>
+      <p className="flex flex-row justify-center mt-6 mb-14">All rights reserved </p>
     </div>
   );
 }

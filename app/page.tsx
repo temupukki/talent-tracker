@@ -136,9 +136,9 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100">
      
-      <motion.div 
+      <motion.div                
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -159,7 +159,7 @@ export default function Home() {
                 Best destination around the world
               </motion.h1>
               
-              <motion.div variants={fadeInUp} className="space-y-2">
+              <motion.div variants={fadeInUp} >
                 <h1 className="text-5xl lg:text-7xl font-black text-blue-950 leading-tight">
                   Travel, enjoy
                 </h1>

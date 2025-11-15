@@ -16,11 +16,11 @@ const navbar_items: string[] = ["Home", "About", "Contact", "Login"];
 export default function NavBar() {
   const [open, setOpen] = useState(false);
   return (
-    <div className="px-11">
-      <nav className="flex justify-end gap-12 text-green-700 z-10 px-10 py-6 ">
+    <div className="bg-linear-to-br from-blue-50 to-indigo-100">
+      <nav className="flex justify-end gap-12 text-gray-900 z-10 px-10 py-6 mr-40 ">
         <div className="absolute top-6 left-6">
-          <motion.h1 whileHover={{ scale: 1.2 }} className="font-bold text-2xl">
-            CertiFlow
+          <motion.h1 whileHover={{ scale: 1.2 }} className="font-bold text-4xl ml-48">
+            Certi<span className="text-orange-600 font-black">F</span>low
           </motion.h1>
         </div>
 
@@ -31,7 +31,7 @@ export default function NavBar() {
               <motion.li
                 whileHover={{ scale: 1.07 }}
                 whileTap={{ scale: 0.88 }}
-                className="list-none text-[19px] hover:font-bold"
+                className="list-none text-[19px] hover:font-semibold hover:text-orange-400"
                 key={index}
               >
                 <a href={path}>{items}</a>
