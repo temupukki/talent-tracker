@@ -11,7 +11,7 @@ import { CloudSun } from "lucide-react";
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center">
       <div className="grid grid-cols-2 ">
         <div>
           <h1 className="uppercase font-bold pt-20 px-29 text-orange-400">
@@ -27,7 +27,7 @@ export default function Home() {
             and full life.
           </p>
         </div>
-        <div>
+        <div className="pl-20">
           <img className="w-90 h-90 pt-20" src="/c.png" alt="photo" />
         </div>
       </div>
@@ -38,18 +38,69 @@ export default function Home() {
         <p className="flex flex-col justify-center items-center text-4xl text-blue-950 pt-2 font-bold">
           We Offer Best Services
         </p>
-        <Card className="w-full max-w-sm">
+        <div className="grid grid-cols-4 gap-18 pt-10">
+       
+       <Card className="w-full max-w-sm">
           <CardHeader>
             
-            <CardDescription>
-              <CloudSun />
+            <CardDescription className="flex flex-col justify-center items-center">
+              <CloudSun className="w-24 h-14"/>
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <p>Calculated whether</p>
-
+            <p className="font-bold text-gray-800 mb-1">Calculated whether</p>
+             <p className="text-gray-600 font-semibold ">Built Wicket longer </p>
+             <p className="text-gray-600 font-semibold ">admire do barton </p> 
+             <p className="text-gray-600 font-semibold ">vanity itself do in it.</p>
           </CardContent>
         </Card>
+            <Card className="w-full max-w-sm">
+          <CardHeader>
+            
+            <CardDescription className="flex flex-col justify-center items-center">
+              <CloudSun className="w-24 h-14"/>
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="font-bold text-gray-800 mb-1">Calculated whether</p>
+             <p className="text-gray-600 font-semibold ">Built Wicket longer </p>
+             <p className="text-gray-600 font-semibold ">admire do barton </p> 
+             <p className="text-gray-600 font-semibold ">vanity itself do in it.</p>
+          </CardContent>
+        </Card>
+          <Card className="w-full max-w-sm">
+          <CardHeader>
+            
+            <CardDescription className="flex flex-col justify-center items-center">
+              <CloudSun className="w-24 h-14"/>
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="font-bold text-gray-800 mb-1">Calculated whether</p>
+             <p className="text-gray-600 font-semibold ">Built Wicket longer </p>
+             <p className="text-gray-600 font-semibold ">admire do barton </p> 
+             <p className="text-gray-600 font-semibold ">vanity itself do in it.</p>
+          </CardContent>
+        </Card>
+        <Card className="w-full max-w-sm">
+          <CardHeader>
+            
+            <CardDescription className="flex flex-col justify-center items-center">
+              <CloudSun className="w-24 h-14"/>
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="font-bold text-gray-800 mb-1">Calculated whether</p>
+             <p className="text-gray-600 font-semibold ">Built Wicket longer </p>
+             <p className="text-gray-600 font-semibold ">admire do barton </p> 
+             <p className="text-gray-600 font-semibold ">vanity itself do in it.</p>
+          </CardContent>
+        </Card>
+        </div>
+
+      </div>
+      <div className=" ">
+
       </div>
     </div>
   );
