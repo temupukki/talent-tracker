@@ -12,6 +12,7 @@ import {
   FieldSeparator,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   Select,
   SelectContent,
@@ -26,7 +27,7 @@ export default function signUp() {
     <div className="grid grid-cols-[40%_60%]  ">
       <div className="bg-orange-500 h-screen "></div>
       <div className="bg-linear-to-br from-blue-50 to-indigo-100 ">
-        <div className="flex flex-col justify-center items-center mt-40 space-y-4 mb-10">
+        <div className="flex flex-col justify-center items-center mt-24 space-y-4 mb-10">
           <h1 className=" text-2xl font-semibold ">
             BECOME AN EXCLUSIVE MEMBER
           </h1>
@@ -65,7 +66,7 @@ export default function signUp() {
                 <div >
                   <Input
                     className="border-2 rounded-none border-gray-600 pr-47 py-8"
-                    placeholder="First name"
+                    placeholder="abcd@email.com"
                     required
                   />
                 </div>
@@ -75,7 +76,7 @@ export default function signUp() {
                 <div className="flex flex-row space-x-3">
                   <Input
                     className="border-2 rounded-none border-gray-600 pr-47 py-8"
-                    placeholder="Last name"
+                    placeholder="09**********"
                     required
                   />
                 </div>
@@ -90,7 +91,7 @@ export default function signUp() {
                 <div >
                   <Input
                     className="border-2 rounded-none border-gray-600 pr-47 py-8"
-                    placeholder="First name"
+                    placeholder="Password"
                     required
                   />
                 </div>
@@ -100,7 +101,7 @@ export default function signUp() {
                 <div className="flex flex-row space-x-3">
                   <Input
                     className="border-2 rounded-none border-gray-600 pr-47 py-8"
-                    placeholder="Last name"
+                    placeholder="Confirm your password"
                     required
                   />
                 </div>
