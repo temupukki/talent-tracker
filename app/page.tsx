@@ -190,39 +190,122 @@ export default function Home() {
                 <h1 className="text-gray-600 text-l font-semibold">
                   Choose destination
                 </h1>
-                <p>Lorem ipsum dolor sit amet,consectetur  </p>
+                <p>Lorem ipsum dolor sit amet,consectetur </p>
                 <p> jsfkjsfgjkdf, adipiscing elit.</p>
-                
               </div>
             </div>
-               <div className="flex items-center space-x-3 ml-28 mt-14">
+            <div className="flex items-center space-x-3 ml-28 mt-14">
               <BriefcaseBusiness className="w-16 h-16" />
               <div className="ml-4">
                 <h1 className="text-gray-600 text-l font-semibold">
                   Choose destination
                 </h1>
-                <p>Lorem ipsum dolor sit amet,consectetur  </p>
+                <p>Lorem ipsum dolor sit amet,consectetur </p>
                 <p> jsfkjsfgjkdf, adipiscing elit.</p>
-                
               </div>
             </div>
-               <div className="flex items-center space-x-3 ml-28 mt-14">
+            <div className="flex items-center space-x-3 ml-28 mt-14">
               <BriefcaseBusiness className="w-16 h-16" />
               <div className="ml-4">
                 <h1 className="text-gray-600 text-l font-semibold">
                   Choose destination
                 </h1>
-                <p>Lorem ipsum dolor sit amet,consectetur  </p>
+                <p>Lorem ipsum dolor sit amet,consectetur </p>
                 <p> et dolore , adipiscing elit.</p>
-                
               </div>
             </div>
           </div>
-          <div className="pl-20">
-            <img className="w-90 h-90 pt-20" src="/c.png" alt="photo" />
+          <div className="ml-10 mt-32">
+            <Card className="w-full max-w-sm h-100 rounded-2xl overflow-hidden shadow-md">
+              <img src="man.jfif" alt="Work Image" className="w-full h-44 " />
+
+              <CardContent className="p-4 space-y-2">
+                <h2 className="text-lg font-bold text-gray-900">
+                  Project Manager
+                </h2>
+                <p className="text-gray-600 text-sm">
+                  Manage project timelines, teams, and workflow efficiently.
+                </p>
+
+                <div className="flex items-center space-x-2 pt-2">
+                  <BriefcaseBusiness className="w-6 h-6 text-gray-700" />
+                  <span className="text-gray-700 font-medium">Full-time</span>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
-      </div>
+        <div className="grid grid-cols-2   ">
+          <div>
+            <h1 className="uppercase font-semibold pt-20 px-29 text-gray-600">
+              Testimnials
+            </h1>
+            <p className="px-29 text-6xl text-black font-bold pt-3">
+              What People Say
+            </p>
+            <p className="px-29 text-6xl text-black font-bold pt-3">About Us</p>
+            <div className="flex items-center space-x-3 ml-28 mt-14">
+              <BriefcaseBusiness className="w-16 h-16" />
+              <div className="ml-4">
+                <h1 className="text-gray-600 text-l font-semibold">
+                  Choose destination
+                </h1>
+                <p>Lorem ipsum dolor sit amet,consectetur </p>
+                <p> jsfkjsfgjkdf, adipiscing elit.</p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-3 ml-28 mt-14">
+              <BriefcaseBusiness className="w-16 h-16" />
+              <div className="ml-4">
+                <h1 className="text-gray-600 text-l font-semibold">
+                  Choose destination
+                </h1>
+                <p>Lorem ipsum dolor sit amet,consectetur </p>
+                <p> jsfkjsfgjkdf, adipiscing elit.</p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-3 ml-28 mt-14">
+              <BriefcaseBusiness className="w-16 h-16" />
+              <div className="ml-4">
+                <h1 className="text-gray-600 text-l font-semibold">
+                  Choose destination
+                </h1>
+                <p>Lorem ipsum dolor sit amet,consectetur </p>
+                <p> et dolore , adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+          <div className="ml-10 mt-32">
+            <Card className="w-full max-w-sm h-100 rounded-2xl overflow-hidden shadow-md">
+              <img src="man.jfif" alt="Work Image" className="w-full h-44 " />
+
+              <CardContent className="p-4 space-y-2">
+                <h2 className="text-lg font-bold text-gray-900">
+                  Project Manager
+                </h2>
+                <p className="text-gray-600 text-sm">
+                  Manage project timelines, teams, and workflow efficiently.
+                </p>
+
+                <div className="flex items-center space-x-2 pt-2">
+                  <BriefcaseBusiness className="w-6 h-6 text-gray-700" />
+                  <span className="text-gray-700 font-medium">Full-time</span>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+    
+      </div >
+        <div className="flex flex-row justify-center items-center mt-27 space-x-18">
+          <img src="CBE.jfif" alt="CBE"  className="h-26"/>
+          <img src="dashen.png" alt="dashen" className="h-24" />
+          <img src="abssinia.png" alt="Abssinia"className="h-26" />
+          <img src="safari.png" alt="Safaricom" className="h-26"/>
+          <img src="zemen.png" alt="Zemen bank" className="h-24"/>
+          <img src="gondar.jfif" alt="Zemen bank" className="h-26"/>
+          
+        </div>
     </div>
   );
 }
