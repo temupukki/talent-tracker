@@ -11,7 +11,7 @@ export default function Footer() {
       <hr />
       <footer className="flex flex-row my-10 mx-60  ">
         <div>
-          <h1 className="text-gray-800 text-4xl font-bold mb-6  ">CertiFlow.</h1>
+          <h1 className="text-gray-800 text-4xl font-bold mb-6  ">Certi<span className="text-orange-600 font-black">F</span>low.</h1>
           <p className="text-gray-600">Lorem ipsum dolor sit elit pukki, </p>
           <p className="text-gray-600">consectetur adipiscing .</p>
         </div>
@@ -42,9 +42,9 @@ export default function Footer() {
         </div>
         <div className="ml-27">
           <div className="flex flex-row space-x-7">
-            <Facebook />
-            <Instagram />
-            <Twitter />
+            <Facebook className="hover:text-orange-500" />
+            <Instagram className="hover:text-orange-500" />
+            <Twitter className="hover:text-orange-500" />
           </div>
           <p className="text-gray-700 font-bold mt-6">Discover our app.</p>
           <img
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
         
       </footer>
-      <p className="flex flex-row justify-center mt-6 mb-14 gap-2.5"><Copyright />2025 All rights reserved </p>
+      <p className="flex flex-row justify-center mt-6 mb-14 gap-2.5"><Copyright />{now.getFullYear()}All rights reserved </p>
     </div>
   );
 }

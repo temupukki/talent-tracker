@@ -19,7 +19,7 @@ export default function NavBar() {
     <div className="bg-linear-to-br from-blue-50 to-indigo-100">
       <nav className="flex justify-end gap-12 text-gray-900 z-10 px-10 py-6 mr-40 ">
         <div className="absolute top-6 left-6">
-          <motion.h1 whileHover={{ scale: 1.2 }} className="font-bold text-4xl ml-48">
+          <motion.h1 whileHover={{ scale: 1.1 }} className="font-bold text-4xl ml-48">
             Certi<span className="text-orange-600 font-black">F</span>low
           </motion.h1>
         </div>
