@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
         
       </footer>
-      <p className="flex flex-row justify-center mt-6 mb-14 gap-2.5"><Copyright />{now.getFullYear()}All rights reserved </p>
+      <p className="flex flex-row justify-center mt-6 mb-14 gap-2.5"><Copyright />{now.getFullYear()} All rights reserved. </p>
     </div>
   );
 }
