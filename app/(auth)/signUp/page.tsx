@@ -84,7 +84,7 @@ export default function signUp() {
             </FieldSet>
           
           </FieldGroup>
-          <FieldGroup className="px-31 mt-6 ">
+          <FieldGroup className="px-33 mt-6 ">
              <FieldSet >
               <Field>
                 <FieldLabel className="uppercase">password</FieldLabel>
@@ -109,7 +109,7 @@ export default function signUp() {
             </FieldSet>
             </FieldGroup>
             <motion.button  
-            className="mx-31 my-6 rounded-none  border-2 border-blue-950 pr-46 py-3 pl-2 bg-blue-900 text-white"
+            className="mx-33 my-6 rounded-none  border-2 border-blue-950 pr-46 py-3 pl-2 bg-blue-900 text-white"
             whileHover={{scale:1.10}}
             whileTap={{scale:1.0}}
             >
