@@ -11,6 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import Link from "next/link";
 
 const navbar_items: string[] = ["Home", "About", "Contact", "Login"];
 export default function NavBar() {
@@ -26,7 +27,7 @@ export default function NavBar() {
 
         {navbar_items.map((items, index) => {
           {
-            const path = `/${items.toLowerCase()}`;
+            const path = `/#${items.toLowerCase()}`;
             return (
               <motion.li
                 whileHover={{ scale: 1.07 }}
@@ -34,7 +35,7 @@ export default function NavBar() {
                 className="list-none text-[19px] hover:font-semibold hover:text-orange-400"
                 key={index}
               >
-                <a href={path}>{items}</a>
+                <Link href={path}>{items}</Link>
               </motion.li>
             );
           }

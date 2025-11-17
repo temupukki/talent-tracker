@@ -628,6 +628,9 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.div>
+      <section id="about">
+        <h1 className="text-6xl uppercase"> pukki</h1>
+      </section>
     </div>
   );
 }
