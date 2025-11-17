@@ -8,18 +8,18 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { 
-  BriefcaseBusiness, 
-  CloudSun, 
-  Plane, 
-  MapPin, 
+import {
+  BriefcaseBusiness,
+  CloudSun,
+  Plane,
+  MapPin,
   Calendar,
   Star,
   Quote,
   ArrowRight,
   Search,
   Users,
-  ShieldCheck
+  ShieldCheck,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -33,38 +33,38 @@ export default function Home() {
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: "easeOut" }
+    transition: { duration: 0.6, ease: "easeOut" },
   };
 
   const staggerContainer = {
     animate: {
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const services = [
     {
       icon: <CloudSun className="w-12 h-12 text-blue-500" />,
       title: "Perfect Weather",
-      description: "Get real-time weather updates for your dream destinations"
+      description: "Get real-time weather updates for your dream destinations",
     },
     {
       icon: <MapPin className="w-12 h-12 text-green-500" />,
       title: "Best Locations",
-      description: "Discover hidden gems and popular spots worldwide"
+      description: "Discover hidden gems and popular spots worldwide",
     },
     {
       icon: <Calendar className="w-12 h-12 text-purple-500" />,
       title: "Flexible Planning",
-      description: "Plan your trips with customizable itineraries"
+      description: "Plan your trips with customizable itineraries",
     },
     {
       icon: <ShieldCheck className="w-12 h-12 text-red-500" />,
       title: "Safe Travel",
-      description: "Travel with confidence and comprehensive safety guides"
-    }
+      description: "Travel with confidence and comprehensive safety guides",
+    },
   ];
 
   const destinations = [
@@ -73,57 +73,62 @@ export default function Home() {
       name: "Addis Ababa, Ethiopia",
       price: "$899",
       rating: 4.8,
-      days: "7 Days Tour"
+      days: "7 Days Tour",
     },
     {
       image: "/addis.jfif",
       name: "Rome, Italy",
       price: "$1,299",
       rating: 4.9,
-      days: "10 Days Tour"
+      days: "10 Days Tour",
     },
     {
       image: "/addis.jfif",
       name: "Bali, Indonesia",
       price: "$1,099",
       rating: 4.7,
-      days: "8 Days Tour"
-    }
+      days: "8 Days Tour",
+    },
   ];
 
   const steps = [
     {
       icon: <Search className="w-8 h-8 text-blue-500" />,
       title: "Choose Destination",
-      description: "Browse through our curated list of amazing destinations worldwide"
+      description:
+        "Browse through our curated list of amazing destinations worldwide",
     },
     {
       icon: <Calendar className="w-8 h-8 text-green-500" />,
       title: "Select Dates",
-      description: "Pick your preferred travel dates and customize your itinerary"
+      description:
+        "Pick your preferred travel dates and customize your itinerary",
     },
     {
       icon: <Users className="w-8 h-8 text-purple-500" />,
       title: "Book & Travel",
-      description: "Confirm your booking and get ready for an unforgettable journey"
-    }
+      description:
+        "Confirm your booking and get ready for an unforgettable journey",
+    },
   ];
 
   const testimonials = [
     {
       name: "Sarah Johnson",
       role: "Travel Enthusiast",
-      content: "The best travel experience I've ever had! Everything was perfectly organized.",
+      content:
+        "The best travel experience I've ever had! Everything was perfectly organized.",
       rating: 5,
-      image: "/woman.jfif"
+      image: "/woman.jfif",
     },
     {
       name: "Mike Chen",
       role: "Adventure Seeker",
-      content: "Amazing destinations and seamless booking process. Highly recommended!",
+      content:
+        "Amazing destinations and seamless booking process. Highly recommended!",
       rating: 5,
-      image: "/man.jfif"
-    }
+      image: "/man.jfif",
+    },
   ];
 
   const partners = [
@@ -132,34 +137,33 @@ export default function Home() {
     { name: "Abssinia", logo: "/abssinia.png", class: "h-16" },
     { name: "Safaricom", logo: "/safari.png", class: "h-16" },
     { name: "Zemen Bank", logo: "/zemen.png", class: "h-14" },
-    { name: "Gondar", logo: "/gondar.jfif", class: "h-16" }
+    { name: "Gondar", logo: "/gondar.jfif", class: "h-16" },
   ];
 
   return (
     <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100">
-     
-      <motion.div                
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         className="relative overflow-hidden"
       >
         <div className="flex flex-col items-center justify-center min-h-screen px-4">
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="initial"
             animate="animate"
             className="grid grid-cols-1 lg:grid-cols-2 max-w-7xl mx-auto items-center gap-12"
           >
             <motion.div variants={fadeInUp} className="space-y-6">
-              <motion.h1 
+              <motion.h1
                 variants={fadeInUp}
                 className="uppercase font-bold text-lg tracking-widest text-orange-500"
               >
                 Best destination around the world
               </motion.h1>
-              
-              <motion.div variants={fadeInUp} >
+
+              <motion.div variants={fadeInUp}>
                 <h1 className="text-5xl lg:text-7xl font-black text-blue-950 leading-tight">
                   Travel, enjoy
                 </h1>
@@ -171,15 +175,16 @@ export default function Home() {
                 </h1>
               </motion.div>
 
-              <motion.p 
+              <motion.p
                 variants={fadeInUp}
                 className="text-xl text-gray-600 max-w-2xl leading-relaxed"
               >
-                Discover amazing places at exclusive deals. Eat, shop, visit 
-                interesting places around the world and create unforgettable memories.
+                Discover amazing places at exclusive deals. Eat, shop, visit
+                interesting places around the world and create unforgettable
+                memories.
               </motion.p>
 
-              <motion.div 
+              <motion.div
                 variants={fadeInUp}
                 className="flex flex-col sm:flex-row gap-4 pt-6"
               >
@@ -191,7 +196,7 @@ export default function Home() {
                   Find Destinations
                   <Plane className="w-5 h-5" />
                 </motion.button>
-                
+
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -211,21 +216,21 @@ export default function Home() {
               transition={{ duration: 1, delay: 0.5 }}
               className="relative"
             >
-              <motion.img 
+              <motion.img
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
                 className="w-full max-w-2xl rounded-2xl shadow-2xl"
-                src="/c.png" 
-                alt="Travel Experience" 
+                src="/c.png"
+                alt="Travel Experience"
               />
               <motion.div
-                animate={{ 
+                animate={{
                   y: [0, -20, 0],
                 }}
-                transition={{ 
+                transition={{
                   duration: 4,
                   repeat: Infinity,
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
                 className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl"
               >
@@ -242,15 +247,14 @@ export default function Home() {
         </div>
       </motion.div>
 
- 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         className="py-20 px-4"
       >
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -264,7 +268,7 @@ export default function Home() {
             </h2>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
@@ -274,10 +278,10 @@ export default function Home() {
               <motion.div
                 key={index}
                 variants={fadeInUp}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   y: -10,
-                  transition: { type: "spring", stiffness: 300 }
+                  transition: { type: "spring", stiffness: 300 },
                 }}
               >
                 <Card className="w-full rounded-2xl shadow-lg border-0 hover:shadow-2xl transition-all duration-300 bg-white/80 backdrop-blur-sm">
@@ -305,14 +309,14 @@ export default function Home() {
         </div>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         className="py-20 px-4 bg-white/50"
       >
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -326,7 +330,7 @@ export default function Home() {
             </h2>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
@@ -336,9 +340,9 @@ export default function Home() {
               <motion.div
                 key={index}
                 variants={fadeInUp}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.03,
-                  y: -5
+                  y: -5,
                 }}
                 className="group cursor-pointer"
               >
@@ -352,7 +356,9 @@ export default function Home() {
                       className="w-full h-64 object-cover"
                     />
                     <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
-                      <p className="font-bold text-orange-500">{destination.price}</p>
+                      <p className="font-bold text-orange-500">
+                        {destination.price}
+                      </p>
                     </div>
                   </div>
                   <CardContent className="p-6">
@@ -379,7 +385,7 @@ export default function Home() {
         </div>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -445,9 +451,9 @@ export default function Home() {
               >
                 <Card className="w-full max-w-md rounded-2xl overflow-hidden shadow-2xl border-0 mx-auto">
                   <div className="relative">
-                    <img 
-                      src="/man.jfif" 
-                      alt="Travel Experience" 
+                    <img
+                      src="/man.jfif"
+                      alt="Travel Experience"
                       className="w-full h-64 object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
@@ -457,16 +463,21 @@ export default function Home() {
                       Luxury Bali Package
                     </h2>
                     <p className="text-gray-600 leading-relaxed">
-                      Experience the perfect blend of luxury and adventure in the heart of Bali.
+                      Experience the perfect blend of luxury and adventure in
+                      the heart of Bali.
                     </p>
                     <div className="flex items-center justify-between pt-4">
                       <div className="flex items-center gap-2">
                         <Calendar className="w-5 h-5 text-blue-500" />
-                        <span className="text-gray-700 font-medium">8 Days</span>
+                        <span className="text-gray-700 font-medium">
+                          8 Days
+                        </span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Users className="w-5 h-5 text-green-500" />
-                        <span className="text-gray-700 font-medium">12 People</span>
+                        <span className="text-gray-700 font-medium">
+                          12 People
+                        </span>
                       </div>
                       <div className="flex items-center gap-1">
                         <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
@@ -481,7 +492,7 @@ export default function Home() {
         </div>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -520,22 +531,31 @@ export default function Home() {
                     className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all"
                   >
                     <div className="flex items-center gap-4 mb-4">
-                      <img 
-                        src={testimonial.image} 
+                      <img
+                        src={testimonial.image}
                         alt={testimonial.name}
                         className="w-12 h-12 rounded-full object-cover"
                       />
                       <div>
-                        <h4 className="font-bold text-gray-800">{testimonial.name}</h4>
-                        <p className="text-gray-600 text-sm">{testimonial.role}</p>
+                        <h4 className="font-bold text-gray-800">
+                          {testimonial.name}
+                        </h4>
+                        <p className="text-gray-600 text-sm">
+                          {testimonial.role}
+                        </p>
                       </div>
                       <div className="ml-auto flex gap-1">
                         {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                          <Star
+                            key={i}
+                            className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                          />
                         ))}
                       </div>
                     </div>
-                    <p className="text-gray-600 italic">"{testimonial.content}"</p>
+                    <p className="text-gray-600 italic">
+                      "{testimonial.content}"
+                    </p>
                   </motion.div>
                 ))}
               </motion.div>
@@ -548,13 +568,13 @@ export default function Home() {
               className="relative"
             >
               <motion.div
-                animate={{ 
+                animate={{
                   y: [0, -15, 0],
                 }}
-                transition={{ 
+                transition={{
                   duration: 4,
                   repeat: Infinity,
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
                 className="absolute -top-8 -left-8 bg-white p-6 rounded-2xl shadow-2xl z-10"
               >
@@ -569,9 +589,9 @@ export default function Home() {
               >
                 <Card className="w-full max-w-md rounded-2xl overflow-hidden shadow-2xl border-0 mx-auto">
                   <div className="relative">
-                    <img 
-                      src="/woman.jfif" 
-                      alt="Happy Traveler" 
+                    <img
+                      src="/woman.jfif"
+                      alt="Happy Traveler"
                       className="w-full h-80 object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
@@ -583,15 +603,14 @@ export default function Home() {
         </div>
       </motion.div>
 
-    
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         className="py-16 px-4 bg-white"
       >
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -602,7 +621,7 @@ export default function Home() {
             </h3>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
@@ -612,14 +631,14 @@ export default function Home() {
               <motion.div
                 key={index}
                 variants={fadeInUp}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.2,
-                  transition: { type: "spring", stiffness: 400 }
+                  transition: { type: "spring", stiffness: 400 },
                 }}
                 className="opacity-60 hover:opacity-100 transition-all duration-300 grayscale hover:grayscale-0"
               >
-                <img 
-                  src={partner.logo} 
+                <img
+                  src={partner.logo}
                   alt={partner.name}
                   className={partner.class}
                 />
@@ -629,7 +648,52 @@ export default function Home() {
         </div>
       </motion.div>
       <section id="about">
-        <h1 className="text-6xl uppercase"> pukki</h1>
+        <div className="grid grid-cols-2">
+          <div className=" h-screen "></div>
+          <div className=" h-screen">
+            <p
+              className="uppercase text-orange-600 mt-35 ml-21 font-semibold  text-xl "
+              style={{ letterSpacing: "4px" }}
+            >
+              A bit
+            </p>
+            <h1
+              className="uppercase text-5xl ml-20 mt-4 font-bold "
+              style={{ letterSpacing: "5px" }}
+            >
+              About us
+            </h1>
+            <div className="ml-20 text-gray-800 mt-4 space-y-1">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing nisi ut
+                aliquip elit.
+              </p>
+              <p>
+                Sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua nim id est laborum.
+              </p>
+              <p>
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo .
+              </p>
+              <p>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur.
+              </p>
+              <p>
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+            <motion.button 
+            whileHover={{scale:1.06}}
+            whileTap={{scale:0.97}}
+            
+            className="uppercase bg-orange-600 ml-20 mt-25 p-5 pr-10 text-white font-semibold rounded-l-xl rounded-tr-xl rounded-br-[55px]  ">
+              Explore More
+            </motion.button>
+          </div>
+        </div>
       </section>
     </div>
   );
