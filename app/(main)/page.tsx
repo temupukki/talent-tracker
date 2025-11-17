@@ -607,7 +607,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="py-16 px-4 bg-white"
+        className="py-16 px-4 "
       >
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -647,9 +647,49 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.div>
+      <hr />
       <section id="about">
         <div className="grid grid-cols-2">
-          <div className=" h-screen "></div>
+          <div className=" h-screen ">
+            <div className="grid grid-cols-2">
+              <div className="mt-60 ml-30">
+                <img
+                  className="rounded-xl h-70 w-60 "
+                  src="/addis.jfif"
+                  alt="Addis Ababa"
+                />
+                <p className="ml-22 mt-11 font-medium">Best ratings</p>
+                <p
+                  className="ml-22 mt-4 text-l"
+                  style={{ letterSpacing: "4px" }}
+                >
+                  😡🥺😀😂🤣
+                  <motion.span
+                    className="text-2xl"
+                    whileHover={{ scale: 1.12 }}
+                  >
+                    🤝
+                  </motion.span>
+                </p>
+              </div>
+              <div className="grid grid-2">
+                <div className="mt-14 ml-4">
+                  <img
+                    className="rounded-xl h-54 w-47 shadow-2xl "
+                    src="/addis.jfif"
+                    alt="Addis Ababa"
+                  />
+                </div>
+                <div className="ml-4 mt-8">
+                  <img
+                    className="rounded-xl h-80 w-65 shadow-2xl "
+                    src="/addis.jfif"
+                    alt="Addis Ababa"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
           <div className=" h-screen">
             <p
               className="uppercase text-orange-600 mt-35 ml-21 font-semibold  text-xl "
@@ -685,11 +725,11 @@ export default function Home() {
                 qui officia deserunt mollit anim id est laborum.
               </p>
             </div>
-            <motion.button 
-            whileHover={{scale:1.06}}
-            whileTap={{scale:0.97}}
-            
-            className="uppercase bg-orange-600 ml-20 mt-25 p-5 pr-10 text-white font-semibold rounded-l-xl rounded-tr-xl rounded-br-[55px]  ">
+            <motion.button
+              whileHover={{ scale: 1.06 }}
+              whileTap={{ scale: 0.97 }}
+              className="uppercase bg-orange-600 ml-20 mt-25 p-5 pr-10 text-white font-semibold rounded-l-xl rounded-tr-xl rounded-br-[55px] shadow-2xl "
+            >
               Explore More
             </motion.button>
           </div>
