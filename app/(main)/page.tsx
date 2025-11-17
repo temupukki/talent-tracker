@@ -672,7 +672,7 @@ export default function Home() {
                   </motion.span>
                 </p>
               </div>
-              <div className="grid grid-2">
+              <div className="grid-2">
                 <div className="mt-14 ml-4">
                   <img
                     className="rounded-xl h-54 w-47 shadow-2xl "
@@ -734,6 +734,12 @@ export default function Home() {
             </motion.button>
           </div>
         </div>
+      </section>
+      <section id='contact'>
+        <div>
+          <h1 className="text-orange-600 flex justify-center font-semibold text-xl">Contact us</h1>
+        </div>
+
       </section>
     </div>
   );
