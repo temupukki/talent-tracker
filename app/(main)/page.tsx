@@ -20,6 +20,8 @@ import {
   Search,
   Users,
   ShieldCheck,
+  Mail,
+  Phone,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -735,17 +737,41 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id='contact'>
+      <section id="contact">
         <div className="">
-          <h1 className="text-orange-600 flex justify-center font-semibold text-xl">Contact us</h1>
-          <h1 className="text-5xl my-4 font-semibold flex justify-center">We`d love to hear from you.</h1>
-          <p className="text-gray-600 mt-6 flex justify-center text-l ">Our friendly team is always here to chat.</p>
-
+          <h1 className="text-orange-600 flex justify-center font-semibold text-xl">
+            Contact us
+          </h1>
+          <h1 className="text-5xl my-4 font-semibold flex justify-center">
+            We`d love to hear from you.
+          </h1>
+          <p className="text-gray-600 mt-6 flex justify-center text-l ">
+            Our friendly team is always here to chat.
+          </p>
         </div>
-        <div>
-          
+        <div className="flex mt-30 mb-7">
+          <div className="ml-60">
+            
+            <Mail className="text-orange-600 shadow-2xl  ml-40"  />
+            <p className="ml-38 text-l font-semibold mt-4">Email</p>
+            <p className="ml-20 mt-2">Our friendly team here to help.</p>
+            <p className="ml-28 mt-2 text-orange-600 font-semibold">abebe@gmail.com</p>
+          </div>
+           <div className="ml-40">
+            
+            <MapPin  className="text-orange-600 shadow-2xl  ml-46"  />
+            <p className="ml-43 text-l font-semibold mt-4">Office</p>
+            <p className="ml-18 mt-2">Come and say hello to our HQ  office.</p>
+            <p className="ml-28 mt-2 text-orange-600 font-semibold">Addis ababa ,akaki kality</p>
+          </div>
+           <div className="ml-40">
+            
+            <Phone  className="text-orange-600 shadow-2xl  ml-40"  />
+            <p className="ml-38 text-l font-semibold mt-4">Phone</p>
+            <p className="ml-23 mt-2">Mon-Sat from 8am-4pm</p>
+            <p className="ml-33 mt-2 text-orange-600 font-semibold">0909090909</p>
+          </div>
         </div>
-
       </section>
     </div>
   );
