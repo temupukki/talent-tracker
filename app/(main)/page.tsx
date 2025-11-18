@@ -736,8 +736,14 @@ export default function Home() {
         </div>
       </section>
       <section id='contact'>
-        <div>
+        <div className="">
           <h1 className="text-orange-600 flex justify-center font-semibold text-xl">Contact us</h1>
+          <h1 className="text-5xl my-4 font-semibold flex justify-center">We`d love to hear from you.</h1>
+          <p className="text-gray-600 mt-6 flex justify-center text-l ">Our friendly team is always here to chat.</p>
+
+        </div>
+        <div>
+          
         </div>
 
       </section>
