@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardHeader,
@@ -9,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import { FieldGroup, FieldSet, Field, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
 import {
   BriefcaseBusiness,
@@ -753,104 +755,99 @@ export default function Home() {
         </div>
         <div className="flex mt-30 mb-7">
           <div className="ml-60">
-            
-            <Mail className="text-orange-600 shadow-2xl  ml-40"  />
+            <Mail className="text-orange-600 shadow-2xl  ml-40" />
             <p className="ml-38 text-l font-semibold mt-4">Email</p>
             <p className="ml-20 mt-2">Our friendly team here to help.</p>
-            <p className="ml-28 mt-2 text-orange-600 font-semibold">abebe@gmail.com</p>
+            <p className="ml-28 mt-2 text-orange-600 font-semibold">
+              abebe@gmail.com
+            </p>
           </div>
-           <div className="ml-40">
-            
-            <MapPin  className="text-orange-600 shadow-2xl  ml-46"  />
+          <div className="ml-40">
+            <MapPin className="text-orange-600 shadow-2xl  ml-46" />
             <p className="ml-43 text-l font-semibold mt-4">Office</p>
-            <p className="ml-18 mt-2">Come and say hello to our HQ  office.</p>
-            <p className="ml-28 mt-2 text-orange-600 font-semibold">Addis ababa ,akaki kality</p>
+            <p className="ml-18 mt-2">Come and say hello to our HQ office.</p>
+            <p className="ml-28 mt-2 text-orange-600 font-semibold">
+              Addis ababa ,akaki kality
+            </p>
           </div>
-           <div className="ml-40">
-            
-            <Phone  className="text-orange-600 shadow-2xl  ml-40"  />
+          <div className="ml-40">
+            <Phone className="text-orange-600 shadow-2xl  ml-40" />
             <p className="ml-38 text-l font-semibold mt-4">Phone</p>
             <p className="ml-23 mt-2">Mon-Sat from 8am-4pm</p>
-            <p className="ml-33 mt-2 text-orange-600 font-semibold">0909090909</p>
+            <p className="ml-33 mt-2 text-orange-600 font-semibold">
+              0909090909
+            </p>
           </div>
         </div>
-<hr className="border-t border-gray-400 my-6 w-7/8 mx-auto" />
-        <div className="mt-30 " >
+        <hr className="border-t border-gray-400 my-6 w-7/8 mx-auto" />
+        <div className="mt-30 ">
           <h1 className="text-orange-600 flex justify-center font-semibold text-l mb-4">
             Contact us
           </h1>
-          <h1 className="text-4xl font-semibold flex justify-center">Get in touch</h1>
-           <p className="text-m my-4 font-semibold flex justify-center text-gray-600 mb-14">
+          <h1 className="text-4xl font-semibold flex justify-center">
+            Get in touch
+          </h1>
+          <p className="text-m my-4 font-semibold flex justify-center text-gray-600 mb-14">
             We`d love to hear from you, Please fill out this form.
           </p>
-           <form>
-          <FieldGroup className="flex flex-col items-center justify-center ">
-            <FieldSet className="flex flex-row space-x-3">
-              <Field>
-                <FieldLabel >First name</FieldLabel>
-                <div >
-                  <Input
-                    className="border-2  border-gray-600 pr-14 py-6 rounded-3xl hover:border-orange-500 "
-                    placeholder="First name"
-                    required
-                  />
-                </div>
-              </Field>
-                  <Field>
-                <FieldLabel >last name</FieldLabel>
-                <div className="flex flex-row space-x-3">
-                  <Input
-                    className="border-2 rounded-3xl hover:border-orange-500 border-gray-600 pr-14 py-6"
-                    placeholder="Last name"
-                    required
-                  />
-                </div>
-              </Field>
-              </FieldSet>
-            <FieldSet className="flex flex-row space-x-3">
-              <Field>
-                <FieldLabel >Email</FieldLabel>
-                <div >
-                  <Input
-                    className="border-2  border-gray-600 pr-14 py-6 rounded-3xl hover:border-orange-500 "
-                    placeholder="abebe@gmail.com"
-                    required
-                  />
-                </div>
-              </Field>
-                  <Field>
-                <FieldLabel >Phone</FieldLabel>
-                <div className="flex flex-row space-x-3">
-                  <Input
-                    className="border-2 rounded-3xl hover:border-orange-500 border-gray-600 pr-14 py-6"
-                    placeholder="09xxxxxxxx"
-                    required
-                  />
-                </div>
-              </Field>
-             
-            </FieldSet>
-
-            </FieldGroup>
-            <FieldGroup>
-              <FieldSet>
+          <form className="mb-16">
+            <FieldGroup className="flex flex-col items-center justify-center mt-1.5 ">
+              <FieldSet className="flex flex-row space-x-3">
                 <Field>
-                  <textarea name="" id="">
-                    
-                  </textarea>
+                  <FieldLabel>First name</FieldLabel>
+                  <div>
+                    <Input
+                      className="border-2  border-gray-600 pr-14 py-6 rounded-3xl hover:border-orange-500 "
+                      placeholder="First name"
+                      required
+                    />
+                  </div>
+                </Field>
+                <Field>
+                  <FieldLabel>last name</FieldLabel>
+                  <div className="flex flex-row space-x-3">
+                    <Input
+                      className="border-2 rounded-3xl hover:border-orange-500 border-gray-600 pr-14 py-6"
+                      placeholder="Last name"
+                      required
+                    />
+                  </div>
+                </Field>
+              </FieldSet>
+              <FieldSet className="flex flex-row space-x-3 mt-5">
+                <Field>
+                  <FieldLabel>Email</FieldLabel>
+                  <div>
+                    <Input
+                      className="border-2  border-gray-600 pr-14 py-6 rounded-3xl hover:border-orange-500 "
+                      placeholder="abebe@gmail.com"
+                      required
+                    />
+                  </div>
+                </Field>
+                <Field>
+                  <FieldLabel>Phone</FieldLabel>
+                  <div className="flex flex-row space-x-3">
+                    <Input
+                      className="border-2 rounded-3xl hover:border-orange-500 border-gray-600 pr-14 py-6"
+                      placeholder="09xxxxxxxx"
+                      required
+                    />
+                  </div>
                 </Field>
               </FieldSet>
             </FieldGroup>
-          
-        
-            <motion.button  
-            className="mx-33 my-6 rounded-none  border-2 border-blue-950 pr-46 py-3 pl-2 bg-blue-900 text-white"
-            whileHover={{scale:1.10}}
-            whileTap={{scale:1.0}}
-            >
-              Register
-            </motion.button>
-        </form>
+            <FieldGroup className="mt-10 w-[490px] flex ml-150">
+              <FieldSet>
+                <Field>
+                  <Textarea placeholder="Leave us message." className="border-2  hover:border-orange-600 h-30"/>
+                  <Button className="mt-2">Send message</Button>
+                </Field>
+              </FieldSet>
+            </FieldGroup>
+
+           
+          </form>
         </div>
       </section>
     </div>
