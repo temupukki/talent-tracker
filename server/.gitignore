@@ -1,0 +1,17 @@
+db.sqlite3
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Media
+media/
+uploads/
+
+# Misc
+*.log
