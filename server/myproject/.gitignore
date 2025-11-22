@@ -1,0 +1,65 @@
+# Make sure you're in your project root
+cd mydjango_api
+
+# Create .gitignore file
+touch .gitignore
+
+# Open it in your editor and paste the content above
+# Or use this command to create it with content:
+cat > .gitignore << EOF
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+Pipfile.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# PyInstaller
+build/
+dist/
+
+# Database
+*.db
+
+# Pyre type checker
+.pyre/
+EOF
