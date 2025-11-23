@@ -1,10 +1,8 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from .views import Jobviewset
-
-router = DefaultRouter()
-router.register('jobs', Jobviewset)
+from django.urls import path
+from .views import register_user
+from rest_framework_simplejwt.views import TokenObtainPairView
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('auth/register/', register_user, name='register'),
+    path('auth/login/', TokenObtainPairView.as_view(), name='login'),
 ]

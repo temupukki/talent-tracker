@@ -1,120 +1,215 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import {
-  FieldGroup,
-  FieldSet,
-  FieldLegend,
-  FieldDescription,
-  Field,
-  FieldLabel,
-  FieldSeparator,
-} from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
+import { Field, FieldGroup, FieldSet, FieldLabel } from "@/components/ui/field";
 import { motion } from "framer-motion";
-export default function signUp() {
+import { useState } from "react";
+
+export default function SignUp() {
+  const [formData, setFormData] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone_number: "",
+    password: "",
+    confirm_password: ""
+  });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+    setSuccess("");
+
+    try {
+      // Send data to Django backend
+      const response = await fetch('http://localhost:8000/api/auth/register/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Registration failed');
+      }
+      
+      setSuccess("🎉 Registration successful! You can now login.");
+      console.log("User registered:", data);
+      
+      // Reset form
+      setFormData({
+        first_name: "",
+        last_name: "",
+        email: "",
+        phone_number: "",
+        password: "",
+        confirm_password: ""
+      });
+
+    } catch (err) {
+      setError(err.message);
+      console.error("Registration error:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="grid grid-cols-[40%_60%]  ">
-      <div className="bg-orange-500 h-screen "></div>
-      <div className="bg-linear-to-br from-blue-50 to-indigo-100 ">
-        <div className="flex flex-col justify-center items-center mt-24 space-y-4 mb-10">
-          <h1 className=" text-2xl font-semibold ">
-            BECOME AN EXCLUSIVE MEMBER
-          </h1>
-          <p className="uppercase text-gray-700">
-            sign up and join the partnership
-          </p>
+    <div className="grid grid-cols-[40%_60%] min-h-screen">
+      <div className="bg-orange-500"></div>
+      
+      <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 flex flex-col justify-center">
+        <div className="flex flex-col justify-center items-center mb-8">
+          <h1 className="text-3xl font-bold text-gray-800">BECOME AN EXCLUSIVE MEMBER</h1>
+          <p className="uppercase text-gray-600 mt-2">Sign up and join the partnership</p>
         </div>
 
-        <form>
-          <FieldGroup className="flex flex-col items-center justify-center ">
-            <FieldSet className="flex flex-row space-x-3">
+        {/* Success Message */}
+        {success && (
+          <div className="max-w-md mx-auto mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+            {success}
+          </div>
+        )}
+
+        {/* Error Message */}
+        {error && (
+          <div className="max-w-md mx-auto mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+            {error}
+          </div>
+        )}
+
+        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto w-full">
+          <FieldGroup className="space-y-6">
+            {/* Name Row */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Field>
-                <FieldLabel className="uppercase">First name</FieldLabel>
-                <div >
-                  <Input
-                    className="border-2 rounded-none border-gray-600 pr-47 py-8"
-                    placeholder="First name"
-                    required
-                  />
-                </div>
+                <FieldLabel className="uppercase text-sm font-medium mb-2 block">
+                  First Name *
+                </FieldLabel>
+                <Input
+                  name="first_name"
+                  value={formData.first_name}
+                  onChange={handleChange}
+                  className="w-full border-2 border-gray-300 py-3 px-4 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+                  placeholder="Enter your first name"
+                  required
+                />
               </Field>
-                  <Field>
-                <FieldLabel className="uppercase">last name</FieldLabel>
-                <div className="flex flex-row space-x-3">
-                  <Input
-                    className="border-2 rounded-none border-gray-600 pr-47 py-8"
-                    placeholder="Last name"
-                    required
-                  />
-                </div>
-              </Field>
-            </FieldSet>
-             <FieldSet className="flex flex-row space-x-3">
+              
               <Field>
-                <FieldLabel className="uppercase">Email</FieldLabel>
-                <div >
-                  <Input
-                    className="border-2 rounded-none border-gray-600 pr-47 py-8"
-                    placeholder="abcd@email.com"
-                    required
-                  />
-                </div>
+                <FieldLabel className="uppercase text-sm font-medium mb-2 block">
+                  Last Name *
+                </FieldLabel>
+                <Input
+                  name="last_name"
+                  value={formData.last_name}
+                  onChange={handleChange}
+                  className="w-full border-2 border-gray-300 py-3 px-4 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+                  placeholder="Enter your last name"
+                  required
+                />
               </Field>
-                  <Field>
-                <FieldLabel className="uppercase">Phone number</FieldLabel>
-                <div className="flex flex-row space-x-3">
-                  <Input
-                    className="border-2 rounded-none border-gray-600 pr-47 py-8"
-                    placeholder="09**********"
-                    required
-                  />
-                </div>
+            </div>
+
+            {/* Email & Phone Row */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Field>
+                <FieldLabel className="uppercase text-sm font-medium mb-2 block">
+                  Email Address *
+                </FieldLabel>
+                <Input
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full border-2 border-gray-300 py-3 px-4 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+                  placeholder="your@email.com"
+                  required
+                />
               </Field>
-            </FieldSet>
-          
+              
+              <Field>
+                <FieldLabel className="uppercase text-sm font-medium mb-2 block">
+                  Phone Number
+                </FieldLabel>
+                <Input
+                  name="phone_number"
+                  value={formData.phone_number}
+                  onChange={handleChange}
+                  className="w-full border-2 border-gray-300 py-3 px-4 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+                  placeholder="09**********"
+                />
+              </Field>
+            </div>
+
+            {/* Password Row */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Field>
+                <FieldLabel className="uppercase text-sm font-medium mb-2 block">
+                  Password *
+                </FieldLabel>
+                <Input
+                  name="password"
+                  type="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  className="w-full border-2 border-gray-300 py-3 px-4 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+                  placeholder="Create a password"
+                  required
+                />
+              </Field>
+              
+              <Field>
+                <FieldLabel className="uppercase text-sm font-medium mb-2 block">
+                  Confirm Password *
+                </FieldLabel>
+                <Input
+                  name="confirm_password"
+                  type="password"
+                  value={formData.confirm_password}
+                  onChange={handleChange}
+                  className="w-full border-2 border-gray-300 py-3 px-4 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+                  placeholder="Confirm your password"
+                  required
+                />
+              </Field>
+            </div>
           </FieldGroup>
-          <FieldGroup className="px-33 mt-6 ">
-             <FieldSet >
-              <Field>
-                <FieldLabel className="uppercase">password</FieldLabel>
-                <div >
-                  <Input
-                    className="border-2 rounded-none border-gray-600 pr-47 py-8"
-                    placeholder="Password"
-                    required
-                  />
-                </div>
-              </Field>
-                  <Field>
-                <FieldLabel className="uppercase">confrim password</FieldLabel>
-                <div className="flex flex-row space-x-3">
-                  <Input
-                    className="border-2 rounded-none border-gray-600 pr-47 py-8"
-                    placeholder="Confirm your password"
-                    required
-                  />
-                </div>
-              </Field>
-            </FieldSet>
-            </FieldGroup>
-            <motion.button  
-            className="mx-33 my-6 rounded-none  border-2 border-blue-950 pr-46 py-3 pl-2 bg-blue-900 text-white"
-            whileHover={{scale:1.10}}
-            whileTap={{scale:1.0}}
-            >
-              Register
-            </motion.button>
+
+          {/* Submit Button */}
+          <motion.button
+            type="submit"
+            disabled={loading}
+            className="w-full mt-8 py-4 px-6 bg-blue-900 text-white font-semibold text-lg rounded-lg shadow-lg hover:bg-blue-800 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+            whileHover={{ scale: loading ? 1 : 1.02 }}
+            whileTap={{ scale: loading ? 1 : 0.98 }}
+          >
+            {loading ? (
+              <span className="flex items-center justify-center">
+                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Creating Account...
+              </span>
+            ) : (
+              'CREATE MY ACCOUNT'
+            )}
+          </motion.button>
         </form>
       </div>
     </div>
