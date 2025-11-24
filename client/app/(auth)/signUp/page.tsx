@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Field, FieldGroup, FieldSet, FieldLabel } from "@/components/ui/field";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { toast } from "sonner";
 
 export default function SignUp() {
   const [formData, setFormData] = useState({
@@ -18,21 +19,21 @@ export default function SignUp() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     setLoading(true);
     setError("");
     setSuccess("");
 
     try {
-      // Send data to Django backend
+     
       const response = await fetch('http://localhost:8000/api/auth/register/', {
         method: 'POST',
         headers: {
@@ -47,10 +48,10 @@ export default function SignUp() {
         throw new Error(data.error || 'Registration failed');
       }
       
-      setSuccess("🎉 Registration successful! You can now login.");
+     toast.success(" Registration successful! You can now login.");
       console.log("User registered:", data);
       
-      // Reset form
+    
       setFormData({
         first_name: "",
         last_name: "",
@@ -60,8 +61,8 @@ export default function SignUp() {
         confirm_password: ""
       });
 
-    } catch (err) {
-      setError(err.message);
+    } catch (err:unknown) {
+      toast.error(err.message);
       console.error("Registration error:", err);
     } finally {
       setLoading(false);
@@ -78,14 +79,14 @@ export default function SignUp() {
           <p className="uppercase text-gray-600 mt-2">Sign up and join the partnership</p>
         </div>
 
-        {/* Success Message */}
+      
         {success && (
           <div className="max-w-md mx-auto mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
             {success}
           </div>
         )}
 
-        {/* Error Message */}
+       
         {error && (
           <div className="max-w-md mx-auto mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
             {error}
@@ -94,7 +95,7 @@ export default function SignUp() {
 
         <form onSubmit={handleSubmit} className="max-w-2xl mx-auto w-full">
           <FieldGroup className="space-y-6">
-            {/* Name Row */}
+          
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Field>
                 <FieldLabel className="uppercase text-sm font-medium mb-2 block">
