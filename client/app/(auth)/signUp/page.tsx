@@ -15,55 +15,52 @@ export default function SignUp() {
     email: "",
     phone_number: "",
     password: "",
-    confirm_password: ""
+    confirm_password: "",
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
-  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+  const handleChange = (e: { target: { name: any; value: any } }) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setLoading(true);
     setError("");
     setSuccess("");
 
     try {
-     
-      const response = await fetch('http://localhost:8000/api/auth/register/', {
-        method: 'POST',
+      const response = await fetch("http://localhost:8000/api/auth/register/", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
 
       const data = await response.json();
-      
+
       if (!response.ok) {
-        throw new Error(data.error || 'Registration failed');
+        throw new Error(data.error || "Registration failed");
       }
-      
-     toast.success(" Registration successful! You can now login.");
+
+      toast.success(" Registration successful! You can now login.");
       console.log("User registered:", data);
-      
-    
+
       setFormData({
         first_name: "",
         last_name: "",
         email: "",
         phone_number: "",
         password: "",
-        confirm_password: ""
+        confirm_password: "",
       });
-
-    } catch (err:unknown) {
+    } catch (err: unknown) {
       toast.error(err.message);
       console.error("Registration error:", err);
     } finally {
@@ -74,30 +71,19 @@ export default function SignUp() {
   return (
     <div className="grid grid-cols-[40%_60%] min-h-screen">
       <div className="bg-orange-500"></div>
-      
+
       <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 flex flex-col justify-center">
         <div className="flex flex-col justify-center items-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-800">BECOME AN EXCLUSIVE MEMBER</h1>
-          <p className="uppercase text-gray-600 mt-2">Sign up and join the partnership</p>
+          <h1 className="text-3xl font-bold text-gray-800">
+            BECOME AN EXCLUSIVE MEMBER
+          </h1>
+          <p className="uppercase text-gray-600 mt-2">
+            Sign up and join the partnership
+          </p>
         </div>
-
-      
-        {success && (
-          <div className="max-w-md mx-auto mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-            {success}
-          </div>
-        )}
-
-       
-        {error && (
-          <div className="max-w-md mx-auto mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
-            {error}
-          </div>
-        )}
 
         <form onSubmit={handleSubmit} className="max-w-2xl mx-auto w-full">
           <FieldGroup className="space-y-6">
-          
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Field>
                 <FieldLabel className="uppercase text-sm font-medium mb-2 block">
@@ -112,7 +98,7 @@ export default function SignUp() {
                   required
                 />
               </Field>
-              
+
               <Field>
                 <FieldLabel className="uppercase text-sm font-medium mb-2 block">
                   Last Name *
@@ -144,7 +130,7 @@ export default function SignUp() {
                   required
                 />
               </Field>
-              
+
               <Field>
                 <FieldLabel className="uppercase text-sm font-medium mb-2 block">
                   Phone Number
@@ -175,7 +161,7 @@ export default function SignUp() {
                   required
                 />
               </Field>
-              
+
               <Field>
                 <FieldLabel className="uppercase text-sm font-medium mb-2 block">
                   Confirm Password *
@@ -192,11 +178,10 @@ export default function SignUp() {
               </Field>
             </div>
           </FieldGroup>
-            <div className="flex items-center gap-3 mt-5">
-        <Checkbox id="terms" className="w-6 h-6 border-black" />
-        <Label htmlFor="terms">Accept terms and conditions</Label>
-      </div>
-
+          <div className="flex items-center gap-3 mt-5">
+            <Checkbox id="terms" className="w-6 h-6 border-black" />
+            <Label htmlFor="terms">Accept terms and conditions</Label>
+          </div>
 
           <motion.button
             type="submit"
@@ -207,14 +192,30 @@ export default function SignUp() {
           >
             {loading ? (
               <span className="flex items-center justify-center">
-                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                <svg
+                  className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
                 </svg>
                 Creating Account...
               </span>
             ) : (
-              'CREATE MY ACCOUNT'
+              "CREATE MY ACCOUNT"
             )}
           </motion.button>
         </form>
