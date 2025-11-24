@@ -5,6 +5,8 @@ import { Field, FieldGroup, FieldSet, FieldLabel } from "@/components/ui/field";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { toast } from "sonner";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 
 export default function SignUp() {
   const [formData, setFormData] = useState({
@@ -105,7 +107,7 @@ export default function SignUp() {
                   name="first_name"
                   value={formData.first_name}
                   onChange={handleChange}
-                  className="w-full border-2 border-gray-300 py-3 px-4 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+                  className="w-full border-2 border-gray-300 py-7 px-4 rounded-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all "
                   placeholder="Enter your first name"
                   required
                 />
@@ -119,7 +121,7 @@ export default function SignUp() {
                   name="last_name"
                   value={formData.last_name}
                   onChange={handleChange}
-                  className="w-full border-2 border-gray-300 py-3 px-4 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+                  className="w-full border-2 border-gray-300 py-7 px-4 rounded-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
                   placeholder="Enter your last name"
                   required
                 />
@@ -137,7 +139,7 @@ export default function SignUp() {
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full border-2 border-gray-300 py-3 px-4 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+                  className="w-full border-2 border-gray-300 py-7 px-4 rounded-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
                   placeholder="your@email.com"
                   required
                 />
@@ -151,7 +153,7 @@ export default function SignUp() {
                   name="phone_number"
                   value={formData.phone_number}
                   onChange={handleChange}
-                  className="w-full border-2 border-gray-300 py-3 px-4 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+                  className="w-full border-2 border-gray-300 py-7 px-4 rounded-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
                   placeholder="09**********"
                 />
               </Field>
@@ -168,7 +170,7 @@ export default function SignUp() {
                   type="password"
                   value={formData.password}
                   onChange={handleChange}
-                  className="w-full border-2 border-gray-300 py-3 px-4 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+                  className="w-full border-2 border-gray-300 py-7 px-4 rounded-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
                   placeholder="Create a password"
                   required
                 />
@@ -183,15 +185,19 @@ export default function SignUp() {
                   type="password"
                   value={formData.confirm_password}
                   onChange={handleChange}
-                  className="w-full border-2 border-gray-300 py-3 px-4 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+                  className="w-full border-2 border-gray-300 py-7 px-4 rounded-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
                   placeholder="Confirm your password"
                   required
                 />
               </Field>
             </div>
           </FieldGroup>
+            <div className="flex items-center gap-3 mt-5">
+        <Checkbox id="terms" className="w-6 h-6 border-black" />
+        <Label htmlFor="terms">Accept terms and conditions</Label>
+      </div>
 
-          {/* Submit Button */}
+
           <motion.button
             type="submit"
             disabled={loading}
