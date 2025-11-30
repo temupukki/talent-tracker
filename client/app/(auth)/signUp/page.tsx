@@ -72,7 +72,7 @@ export default function SignUp() {
     <div className="grid grid-cols-[40%_60%] min-h-screen">
       <div className="bg-orange-500"></div>
 
-      <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 flex flex-col justify-center">
+      <div className="bg-linear-to-br from-blue-50 to-indigo-100 p-8 flex flex-col justify-center">
         <div className="flex flex-col justify-center items-center mb-8">
           <h1 className="text-3xl font-bold text-gray-800">
             BECOME AN EXCLUSIVE MEMBER
