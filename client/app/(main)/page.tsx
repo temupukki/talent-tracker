@@ -58,7 +58,7 @@ export default function Home() {
     },
     {
       icon: <MapPin className="w-12 h-12 text-green-500" />,
-      title: "Best Locations",
+      title: "Best Location",
       description: "Discover hidden gems and popular spots worldwide",
     },
     {
